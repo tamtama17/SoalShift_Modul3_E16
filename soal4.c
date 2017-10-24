@@ -29,7 +29,7 @@ int main(int argc, char** argv)
             inp += angka;
         }
         inp += argv[j][strlen(argv[j])-1]-48;
-        pthread_create(&(tid[j]), NULL, &faktorial, (void*)inp);
+        pthread_create(&(tid[j-1]), NULL, &faktorial, (void*)inp);
     }
 
     for(i=0;i<argc;i++)
